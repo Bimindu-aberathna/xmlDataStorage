@@ -83,7 +83,7 @@
     <input type="text" id="email" class="formElement" name="email" placeholder="Your email address" value="<%= request.getParameter("email") %>"><br>
     <label for="phone">Phone: </label><br>
     <input type="text" id="phone" class="formElement" name="phone" placeholder="Your phone number" value="<%= request.getParameter("phone") %>"><br><br>
-    <input type="submit" value="SUBMIT">
+    <input type="submit" value="EDIT">
 </form>
 
 <br><br><br><br><br>

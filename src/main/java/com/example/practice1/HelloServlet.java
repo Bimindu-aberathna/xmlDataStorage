@@ -27,25 +27,14 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     String fname;
-    String description = "AI is predicted to grow increasingly pervasive as technology develops, revolutionizing sectors including healthcare, banking, and transportation. The work market will change as a result of AI-driven automation, necessitating new positions and skills.";
-    String region;
+
 
     public void init() {
         message = "Hello World!";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        fname = request.getParameter("name");
-        region = request.getParameter("region");
 
-        response.setContentType("text/html");
-
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>Hello " + fname + "! You are from " + region + "</h1>");
-        out.print("<div>" + description + "</div>");
-        out.println("</body></html>");
     }
 
     @Override
@@ -147,22 +136,7 @@ public class HelloServlet extends HttpServlet {
             emailElement.appendChild(document.createTextNode(email));
             personElement.appendChild(emailElement);
 
-            // Create the address element with nested elements
-            Element addressElement = document.createElement("address");
 
-            Element houseNumberElement = document.createElement("house_number");
-            houseNumberElement.appendChild(document.createTextNode(request.getParameter("house_number")));
-
-            Element streetElement = document.createElement("street");
-            streetElement.appendChild(document.createTextNode(request.getParameter("street")));
-
-            Element cityElement = document.createElement("city");
-            cityElement.appendChild(document.createTextNode(request.getParameter("city")));
-
-            addressElement.appendChild(houseNumberElement);
-            addressElement.appendChild(streetElement);
-            addressElement.appendChild(cityElement);
-            personElement.appendChild(addressElement);
 
             Element phoneElement = document.createElement("phone");
             phoneElement.appendChild(document.createTextNode(phone));

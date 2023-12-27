@@ -46,7 +46,6 @@
         h1 {
             color: #333;
         }
-
         table {
             border-collapse: collapse;
             width: 80%;
@@ -83,10 +82,19 @@
             height: 40px;
             border-radius: 8px;
         }
+        .redirect{
+            color: white;
+        }
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-<h1 style="color: #d7d7d7">User Details</h1>
+<br><br><br>
+<h1 style="color: #d7d7d7">Student Details</h1>
 <input type="text"id="search" placeholder="Search for names..." onkeyup="getSearchReslts()">
 
 <table id="data-table">
@@ -119,6 +127,11 @@
     <% }
     } %>
 </table>
+
+<br><br><br>
+<div class="redirect">
+    Click <a href="${pageContext.request.contextPath}/index.jsp">here</a> to add a new user.
+</div>
 <script>
     function getSearchReslts(){
         let search_text = document.getElementById("search");
@@ -181,7 +194,6 @@
                     rowData.push(cells[j].textContent);
                 }
 
-                // Do something with the rowData
                 // access individual values like this:
                 var id = rowData[0]
                 var name = rowData[1];
